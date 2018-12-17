@@ -25,11 +25,11 @@ directory_path = "sample-images";
 directory_files = readdir(directory_path);
 directory_images  =  filter（x  - >  ismatch（r“\。（jpg | png | gif）{1} $” i，x），directory_files）;
 # Wrong in Julia 1.0
-# UndefVarError: ismatch not (::getfield(Main, Symbol("##11#12")))(::String) at mytest.jl:29
-# mapfilter(::getfield(Main, Symbol("##11#12")), ::typeof(push!), ::Array{String,1}, ::Array{String,1}) at abstractset.jl:336
-# filter(::Function, ::Array{String,1}) at array.jl:2352
+# UndefVarError: ismatch not defined
+# in at mytest.jl:29defined
+# mapfilter at abstractset.jl:336
+# filter at array.jl:2352
 # top-level scope at none:0
-
 
 for image_name in directory_images
     image_path = joinpath(directory_path, image_name);
